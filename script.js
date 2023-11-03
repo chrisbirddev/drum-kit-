@@ -89,3 +89,24 @@ function buttonAnimation(currentKey){
         activeBtn.classList.remove('pressed');
     }, 150);
 }
+
+
+// cheat sheet script 
+
+    const cheatSheetButton = document.getElementById("cheatSheetButton");
+    const cheatSheetModal = document.getElementById("cheatSheetModal");
+    const closeCheatSheet = document.getElementById("closeCheatSheet");
+
+    cheatSheetButton.addEventListener("click", function () {
+        cheatSheetModal.style.display = "block";
+    });
+
+    closeCheatSheet.addEventListener("click", function () {
+        cheatSheetModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === cheatSheetModal) {
+            cheatSheetModal.style.display = "none";
+        }
+    });
